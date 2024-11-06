@@ -1,4 +1,4 @@
-/* Styl ogólny */
+/* Resetowanie stylów */
 * {
     margin: 0;
     padding: 0;
@@ -7,13 +7,10 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #1c1c1c;
-    color: #e4e4e4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background-color: #111;
+    color: #eee;
     text-align: center;
+    overflow-y: scroll;
 }
 
 /* Ekran ładowania */
@@ -31,8 +28,8 @@ body {
 }
 
 .chest-animation {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Chest_Closed.png/320px-Chest_Closed.png') no-repeat center;
     background-size: cover;
     animation: openChest 1.5s infinite;
@@ -44,79 +41,90 @@ body {
     50% { transform: scaleY(1.1); }
 }
 
-/* Kontener strony głównej */
-#main-content {
-    display: none;
-    max-width: 700px;
+/* Styl główny kontenera */
+.container {
+    max-width: 800px;
     padding: 20px;
-    border-radius: 8px;
+    margin: auto;
 }
 
-/* Nagłówek i menu nawigacyjne */
+/* Nagłówek */
 header {
     margin-bottom: 20px;
 }
 
 header h1 {
     font-size: 3em;
-    color: #fff;
+    color: #57e957;
+    margin-bottom: 10px;
 }
 
 nav {
-    margin: 10px 0;
+    margin-top: 10px;
 }
 
 nav a {
     margin: 0 15px;
-    color: #d4d4d4;
+    font-size: 1.2em;
+    color: #aaa;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.3s;
 }
 
 nav a:hover {
     color: #ffd700;
+    transform: scale(1.1);
 }
 
 /* Sekcje */
 section {
     margin-bottom: 30px;
-    padding: 10px;
-    background-color: #2c2c2c;
+    padding: 20px;
+    background-color: #222;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+section h2 {
+    color: #ffd700;
+    margin-bottom: 15px;
+}
+
+section p, .staff-list {
+    font-size: 1.1em;
+}
+
+/* Lista administracji */
+.staff-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.staff-list li {
+    margin: 5px 0;
+    color: #eee;
+}
+
+/* Sekcja wsparcia */
+#support .support-progress {
+    font-weight: bold;
+    color: #57e957;
 }
 
 /* Przyciski */
 .button {
     display: inline-block;
     margin-top: 10px;
-    padding: 10px 20px;
+    padding: 12px 24px;
     color: #fff;
     background-color: #5a5a5a;
     border-radius: 5px;
+    font-size: 1.1em;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .button:hover {
-    background-color: #ffd700;
-}
-
-/* Sekcja administracji */
-.staff-list {
-    list-style-type: none;
-    padding: 0;
-    text-align: left;
-}
-
-.staff-list li {
-    font-size: 1.1em;
-    color: #d4d4d4;
-    margin: 5px 0;
-}
-
-/* Wsparcie */
-#support .support-progress {
-    font-weight: bold;
-    color: #ffd700;
+    background-color: #57e957;
+    transform: scale(1.1);
 }
