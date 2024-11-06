@@ -1,4 +1,4 @@
-/* Resetowanie podstawowych stylów */
+/* Styl ogólny */
 * {
     margin: 0;
     padding: 0;
@@ -7,8 +7,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #111; /* Ciemne tło */
-    color: #eee; /* Jasny kolor tekstu */
+    background-color: #1c1c1c;
+    color: #e4e4e4;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,64 +16,107 @@ body {
     text-align: center;
 }
 
-/* Kontener strony */
-.container {
-    max-width: 600px;
+/* Ekran ładowania */
+.loading-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #1c1c1c;
+    color: #e4e4e4;
+    font-size: 1.5em;
+}
+
+.chest-animation {
+    width: 80px;
+    height: 80px;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Chest_Closed.png/320px-Chest_Closed.png') no-repeat center;
+    background-size: cover;
+    animation: openChest 1.5s infinite;
+}
+
+/* Animacja otwierania skrzyni */
+@keyframes openChest {
+    0%, 100% { transform: scaleY(1); }
+    50% { transform: scaleY(1.1); }
+}
+
+/* Kontener strony głównej */
+#main-content {
+    display: none;
+    max-width: 700px;
     padding: 20px;
-    border: 1px solid #444;
-    background-color: #222; /* Kolor wewnętrznego kontenera */
+    border-radius: 8px;
+}
+
+/* Nagłówek i menu nawigacyjne */
+header {
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 3em;
+    color: #fff;
+}
+
+nav {
+    margin: 10px 0;
+}
+
+nav a {
+    margin: 0 15px;
+    color: #d4d4d4;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+/* Sekcje */
+section {
+    margin-bottom: 30px;
+    padding: 10px;
+    background-color: #2c2c2c;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-/* Nagłówek */
-header h1 {
-    font-size: 3em;
-    color: #fff;
-    margin-bottom: 10px;
-}
-
-header p {
-    font-size: 1.2em;
-    color: #bbb;
-}
-
-/* Sekcja opisu */
-.description h2 {
-    font-size: 2em;
-    color: #fff;
-    margin-bottom: 10px;
-}
-
-.description p {
-    font-size: 1em;
-    color: #ccc;
-    margin-bottom: 10px;
-}
-
-.start-date {
-    color: #fff;
-    font-weight: bold;
-}
-
-/* Styl przycisków */
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-}
-
+/* Przyciski */
 .button {
-    text-decoration: none;
-    color: #fff;
-    background-color: #444;
+    display: inline-block;
+    margin-top: 10px;
     padding: 10px 20px;
+    color: #fff;
+    background-color: #5a5a5a;
     border-radius: 5px;
-    font-size: 1em;
+    text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
 .button:hover {
-    background-color: #666;
+    background-color: #ffd700;
+}
+
+/* Sekcja administracji */
+.staff-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+.staff-list li {
+    font-size: 1.1em;
+    color: #d4d4d4;
+    margin: 5px 0;
+}
+
+/* Wsparcie */
+#support .support-progress {
+    font-weight: bold;
+    color: #ffd700;
 }
