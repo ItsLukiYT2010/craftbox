@@ -1,0 +1,79 @@
+/* Resetowanie podstawowych stylów */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111; /* Ciemne tło */
+    color: #eee; /* Jasny kolor tekstu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Kontener strony */
+.container {
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #444;
+    background-color: #222; /* Kolor wewnętrznego kontenera */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Nagłówek */
+header h1 {
+    font-size: 3em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #bbb;
+}
+
+/* Sekcja opisu */
+.description h2 {
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.description p {
+    font-size: 1em;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.start-date {
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Styl przycisków */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.button {
+    text-decoration: none;
+    color: #fff;
+    background-color: #444;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #666;
+}
