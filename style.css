@@ -128,3 +128,11 @@ section p, .staff-list {
     background-color: #57e957;
     transform: scale(1.1);
 }
+
+/* Styl IP serwera */
+.server-ip {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #57e957;
+    margin-top: 10px;
+}
