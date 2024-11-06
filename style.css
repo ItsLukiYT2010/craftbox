@@ -136,3 +136,40 @@ section p, .staff-list {
     color: #57e957;
     margin-top: 10px;
 }
+
+/* Sekcja Discord */
+#discord {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#discord h2 {
+    color: #ffd700;
+    margin-bottom: 15px;
+}
+
+#discord p {
+    font-size: 1.1em;
+    color: #eee;
+}
+
+/* Styl przycisku do Discorda */
+#discord .button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 24px;
+    color: #fff;
+    background-color: #5a5a5a;
+    border-radius: 5px;
+    font-size: 1.1em;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#discord .button:hover {
+    background-color: #57e957;
+    transform: scale(1.1);
+}
