@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CraftBox - Twój Serwer Minecraft</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- Animacja ładowania -->
     <div class="loading-screen">
@@ -14,7 +16,7 @@
     </div>
 
     <!-- Zawartość strony -->
-    <div class="container" id="main-content">
+    <div class="container" id="main-content" style="display: none;">
         <!-- Nagłówek i menu nawigacyjne -->
         <header>
             <h1>CraftBox</h1>
@@ -69,22 +71,21 @@
         <!-- Sekcja Discord -->
         <section id="discord">
             <h2>Dołącz do naszego Discorda!</h2>
-            <p>Chcesz poznać naszą społeczność i być na bieżąco z wydarzeniami na serwerze? Dołącz do naszego serwera Discord, gdzie organizujemy wydarzenia, dzielimy się nowinkami i pomagamy naszym graczom!</p>
+            <p>Dołącz do naszej społeczności i bądź na bieżąco z wydarzeniami na serwerze. Czekamy na Ciebie!</p>
             <a href="https://discord.gg/wPbfgnJn" class="button" target="_blank">Dołącz do Discorda</a>
         </section>
-
-        <!-- Przyciski do Discorda i ItemShop -->
-        <div class="buttons">
-            <a href="https://discord.gg/wPbfgnJn" class="button" target="_blank">Dołącz do Discorda</a>
-        </div>
     </div>
 
     <script>
         // Skrypt do ukrycia ekranu ładowania po załadowaniu strony
-        window.onload = () => {
-            document.querySelector('.loading-screen').style.display = 'none';
-            document.getElementById('main-content').style.display = 'block';
-        };
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.querySelector('.loading-screen').style.opacity = 0; // Płynne znikanie ekranu ładowania
+                document.querySelector('.loading-screen').style.pointerEvents = 'none'; // Zablokowanie interakcji
+                document.getElementById('main-content').style.display = 'block'; // Pokazanie zawartości strony
+            }, 500); // 0.5 sekundy opóźnienia, aby animacja była widoczna
+        });
     </script>
 </body>
+
 </html>
