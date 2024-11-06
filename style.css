@@ -25,6 +25,7 @@ body {
     background-color: #1c1c1c;
     color: #e4e4e4;
     font-size: 1.5em;
+    transition: opacity 0.5s ease; /* Płynne znikanie */
 }
 
 .chest-animation {
@@ -139,6 +140,10 @@ section p, .staff-list {
 
 /* Sekcja Discord */
 #discord {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Wyśrodkowanie w pionie */
+    justify-content: center; /* Wyśrodkowanie w poziomie */
     margin-bottom: 30px;
     padding: 20px;
     background-color: #222;
@@ -149,17 +154,16 @@ section p, .staff-list {
 #discord h2 {
     color: #ffd700;
     margin-bottom: 15px;
+    text-align: center;
 }
 
 #discord p {
     font-size: 1.1em;
-    color: #eee;
+    text-align: center;
 }
 
-/* Styl przycisku do Discorda */
 #discord .button {
-    display: inline-block;
-    margin-top: 10px;
+    margin-top: 15px;
     padding: 12px 24px;
     color: #fff;
     background-color: #5a5a5a;
