@@ -7,25 +7,68 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Nagłówek serwera -->
+    <!-- Animacja ładowania -->
+    <div class="loading-screen">
+        <div class="chest-animation"></div>
+        <p>Ładowanie CraftBox...</p>
+    </div>
+
+    <!-- Zawartość strony -->
+    <div class="container" id="main-content">
+        <!-- Nagłówek i menu nawigacyjne -->
         <header>
             <h1>CraftBox</h1>
-            <p>Dołącz do serwera Minecraft o niespotykanym poziomie trudności!</p>
+            <nav>
+                <a href="#about">O serwerze</a>
+                <a href="#shop">ItemShop</a>
+                <a href="#staff">Administracja</a>
+                <a href="#support">Wsparcie serwera</a>
+            </nav>
         </header>
 
-        <!-- Opis serwera -->
-        <section class="description">
+        <!-- Sekcja O serwerze -->
+        <section id="about">
             <h2>O serwerze</h2>
-            <p>CraftBox to survivalowy serwer typu hardcore, który oferuje wyjątkowe wrażenia dla wszystkich fanów Minecrafta. Jeśli szukasz wyzwań, CraftBox jest dla Ciebie! Wymagający przeciwnicy, ograniczone zasoby, a także możliwość grania razem z innymi graczami.</p>
+            <p>CraftBox to survivalowy serwer typu hardcore, który oferuje wyjątkowe wrażenia dla wszystkich fanów Minecrafta. Szukasz wyzwań? Chcesz grać na naprawdę trudnym poziomie? Dołącz do nas!</p>
             <p><strong>Start serwera:</strong> <span class="start-date">[TU WPISZ DATĘ STARTU]</span></p>
         </section>
 
-        <!-- Przyciski -->
+        <!-- Sekcja ItemShop -->
+        <section id="shop">
+            <h2>ItemShop</h2>
+            <p>ItemShop pozwala wspierać serwer – każda złotówka pomaga utrzymać i rozwijać serwer CraftBox. Dziękujemy za wsparcie!</p>
+            <a href="[LINK DO ITEMSHOP]" class="button" target="_blank">Przejdź do ItemShop</a>
+        </section>
+
+        <!-- Sekcja Administracja -->
+        <section id="staff">
+            <h2>Administracja</h2>
+            <ul class="staff-list">
+                <li><strong>Właściciel:</strong> _ImYourNightmare</li>
+                <li><strong>Sigma:</strong> Hubaracing123, Kyokushinpro123</li>
+                <li><strong>MOD:</strong> OiwekYT</li>
+            </ul>
+        </section>
+
+        <!-- Sekcja Wsparcie serwera -->
+        <section id="support">
+            <h2>Wsparcie serwera</h2>
+            <p>Obecne wsparcie: <span class="support-progress">0</span> / 50 zł w tym miesiącu.</p>
+            <p>Dzięki Twojej pomocy możemy rozwijać serwer, dodawać nowe funkcje i utrzymywać jego stabilność.</p>
+        </section>
+
+        <!-- Przyciski do Discorda i ItemShop -->
         <div class="buttons">
             <a href="https://discord.gg/wPbfgnJn" class="button" target="_blank">Dołącz do Discorda</a>
-            <a href="[LINK DO ITEMSHOP]" class="button" target="_blank">ItemShop</a>
         </div>
     </div>
+
+    <script>
+        // Skrypt do ukrycia ekranu ładowania po załadowaniu strony
+        window.onload = () => {
+            document.querySelector('.loading-screen').style.display = 'none';
+            document.getElementById('main-content').style.display = 'block';
+        };
+    </script>
 </body>
 </html>
