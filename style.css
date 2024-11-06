@@ -154,12 +154,6 @@ section p, .staff-list {
 #discord h2 {
     color: #ffd700;
     margin-bottom: 15px;
-    text-align: center;
-}
-
-#discord p {
-    font-size: 1.1em;
-    text-align: center;
 }
 
 #discord .button {
